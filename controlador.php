@@ -48,5 +48,4 @@
     header("location: insession.php");
     exit();
   }
-  
 ?>

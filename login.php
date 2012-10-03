@@ -1,14 +1,8 @@
 <html>
   <head>
-    <title>Ingresar</title>
+    <title>Entrar a la pagina</title>
   </head>
   <body>
-    <?php
-       if(isset($errors)){
-         echo $errors;
-       }
-    ?>
-    
     <form action="controlador.php" method="post">
       <fieldset>      
         <legend>Ingreso</legend>
