@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Entrar a la pagina</title>
+    <title>Ingresar</title>
   </head>
   <body>
     <?php
