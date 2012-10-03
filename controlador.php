@@ -10,6 +10,19 @@
   session_name("usuarioMayorista");
   session_start();
   
+  $errors = ' ';
+  
+  if(!empty($_POST['txtContra'])){
+    $_SESSION['txtContra'] = $_POST['txtContra'];
+  }else{
+    $errors = 'Debe ingresar contrasenia';
+  }
+  
+    if(!empty($_POST['txtUsuario'])){
+    $_SESSION['txtUsuario'] = $_POST['txtUsuario'];
+  }else{
+    $errors = $errors.' Debe ingresar su nombre de usuario';
+  }
   
   
   if(!empty($_SESSION['txtContra']) && !empty($_SESSION['txtUsuario'])){
