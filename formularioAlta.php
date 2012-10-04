@@ -3,6 +3,11 @@
     <title>Formulario de alta de clientes</title>
   </head>
   <body>
+    <?php 
+      if(isset($error)){
+          echo $error;
+      }
+    ?>
     <form action="controlForm.php" method="post">
       <fieldset>
         <legend>Datos personales</legend>
@@ -15,8 +20,8 @@
         CUIT:
         <input type="txt" name="txtCuit">
         Sexo:
-        <input type="radio" name="sexo" value="M">
-        <input type="radio"name="sexo" value="F">
+        <input type="radio" name="txtSexo" value="M">
+        <input type="radio"name="txtSexo" value="F">
         Telefono:
         <input type="txt" name="txtTelefono">
         
