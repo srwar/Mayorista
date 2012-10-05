@@ -8,7 +8,7 @@
           echo $error;
       }
     ?>
-    <form action="controlForm.php" method="post">
+    <form action="controlFormClient.php" method="post">
       <fieldset>
         <legend>Datos personales</legend>
         Nombre:
@@ -25,7 +25,7 @@
         Telefono:
         <input type="txt" name="txtTelefono">
         
-        <input type="submit" value="enviarForm"
+        <input type="submit" value="Aceptar"
       </fieldset>
     </form>
   </body>

@@ -1,12 +1,25 @@
 <?php
+/*  
+  $unidadesDeMedida = array(
+      "0" => "-----------",
+      "1" => "Kilogramo",
+      "2" => "Gramo",
+      "3" => "Litro",
+      "4" => "mL",
+      "5" => "cm3"
+  );
+  */
+  error_reporting(E_ALL);
+  ini_set("display_errors", true);
+
   if (count($_POST)){
       
       /*
        * txtNombre----X
        * txtApellido--X
        * txtDireccion-X
-       * txtCuit------
-       * txtTelefono--
+       * txtCuit------X
+       * txtTelefono--x
        * 
        */
       if(empty($_POST['txtNombre'])){
@@ -30,11 +43,11 @@
       }
       
       if(isset($error)){
-          require'formularioAlta.php';
+          require'formAltaCliente.php';
       }else{
           header("Location: altaExitosa.php");
       }
   }else{
-      require'formularioAlta.php';
+      require'formAltaCliente.php';
   }
 ?>
