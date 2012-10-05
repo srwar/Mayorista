@@ -25,7 +25,7 @@
         Telefono:
         <input type="txt" name="txtTelefono">
         
-        <input type="submit" value="enviarForm"
+        <input name="aceptar" type="submit" value="enviarForm">
       </fieldset>
     </form>
   </body>
