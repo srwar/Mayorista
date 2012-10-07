@@ -5,8 +5,8 @@
        * txtNombre----X
        * txtApellido--X
        * txtDireccion-X
-       * txtCuit------
-       * txtTelefono--
+       * txtCuit------X
+       * txtTelefono--X
        * 
        */
       if(empty($_POST['txtNombre'])){
