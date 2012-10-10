@@ -1,32 +1,23 @@
-<html>
-  <head>
-    <title>Formulario - Alta Producto</title>
-  </head>
-  <body>
-    <form action="controlFormProd.php" method="post">
-      <fieldset>
-        <legend>Datos del producto</legend>
+    <fieldset>
+        <legend>ABM Producto</legend>
+		<form action="controlFormProd.php" method="post">	
         Codigo:
-        <input type="txt" name="txtCodigo">
+        <input type="txt" name="txtCodigo"><br>
         Stock:
-        <input type="txt" name="txtStock">
+        <input type="txt" name="txtStock"><br>
         Precio:
-        <input type="txt" name="txtPrecio">
+        <input type="txt" name="txtPrecio"><br>
         Nombre:
-        <input type="txt" name="txtNombre">
+        <input type="txt" name="txtNombre"><br>
         Cantidad:
-        <input type="txt" name="txtCantidad">
+        <input type="txt" name="txtCantidad"><br>
         Tama&ntilde;o:
-        <input type="txt" name="txtTamano">
+        <input type="txt" name="txtTamano"><br>
         Unidad de medida:
         <select name="txtUnidad">
-          <option>
-            <?php foreach($unidadesDeMedida as $clave => $valor){ ?>
-              <option value=<?php echo $clave;?> > <?php echo $valor; ?></option>
-            <?php } ?>
-        </select>
+            <?php foreach($unidadesDeMedida as $clave => $valor) 
+              echo "<option value='$clave'> $valor</option>";
+            ?>
+        </select><br>          
         <input type="submit" value="Aceptar">
-      </fieldset>
-    </form>
-  </body>
-</html>
+    </fieldset>    
