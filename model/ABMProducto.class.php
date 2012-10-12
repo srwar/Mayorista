@@ -7,10 +7,10 @@
 		private $nombre;
 		private $p_cantidad;
 		private $p_tamanio;
-		private $p_unidad_medida;
-		private $categoria;
-		private $proveedor;
-		private $oferta;
+		private $p_unidad_medida;//lista
+		private $categoria;//lista
+		private $proveedor;//cuit valido
+		private $oferta;//bool
 		
 		function ABMProducto($codigo, $stock, $stock_min, $precio, $nombre, $p_cantidad, $p_tamanio, $p_unidad_medida, $categoria, $proveedor, $oferta) {
 			$this->codigo = $codigo;

@@ -1,6 +1,6 @@
 <?php   #
 	class ABMEmpleado {
-		private $cuit;
+		private $dni;
 		private $nombre;
 		private $apellido;
 		private $rol;
@@ -8,9 +8,9 @@
 		private $telefono;
 		private $direccion;
 		private $localidad;
-				
+    
                 function __construct($cuit, $nombre, $apellido, $rol, $sexo, $telefono, $direccion, $localidad) {
-                    $this->cuit = $cuit;
+                    $this->dni = $cuit;
                     $this->nombre = $nombre;
                     $this->apellido = $apellido;
                     $this->rol = $rol;
@@ -21,11 +21,11 @@
                 }
 
                 public function getCuit() {
-                    return $this->cuit;
+                    return $this->dni;
                 }
 
                 public function setCuit($cuit) {
-                    $this->cuit = $cuit;
+                    $this->dni = $cuit;
                 }
 
                 public function getNombre() {
