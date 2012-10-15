@@ -4,7 +4,7 @@
 	$unidadesDeMedida = array("Kg" => "Kilogramos", "Grs" => "Gramos", "Lts" => "Litros", "CC" => "CM3"	);
 	$categoria = array("1" => "BEBIDAS", "2" => "COMIDA", "3" => "GOLOSINAS", "4" => "CEREALES Y LEGUMBRES");
 	include ("ABMProducto.class.php");		
-    $error = array();
+  $error = array();
 
 	  if (isset($_POST) && isset($_POST['aceptar'])) {
 			//echo var_dump($_POST) ."<br>";
