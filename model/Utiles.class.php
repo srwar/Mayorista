@@ -40,7 +40,7 @@
     }
     
     static function nombreEmpleadoValido($nombre){
-      if(!preg_match("/([a-zA-Z]*)/",$nombre)) {
+      if(!preg_match('/^[a-z]{4,28}$/i',$nombre)) {
 			  return false;
 		  }else{
         return true;
@@ -48,7 +48,7 @@
     }
     
     static function nombreProductoValido($nombre){
-      if(!preg_match("/([a-zA-Z0-9]*)/",$nombre)) {
+      if(!preg_match("/^[a-zA-Z0-9]*$/",$nombre)) {
 			  return false;
 		  }else{
         return true;

@@ -18,8 +18,8 @@
 
   //echo var_dump(Utiles::isMedidaCorrecta("kgp",$unidadesDeMedida));
   //$asd = "654";
-  echo var_dump(Utiles::nombreEmpleadoValido('pepe5'));
- /* 
-  echo var-dump(Utiles::nombreProductoValido("papas9 de oro"));
- */
+  //echo var_dump(Utiles::nombreEmpleadoValido("pepe"));
+  
+  echo var_dump(Utiles::nombreProductoValido("producto54654"));
+ 
 ?>
