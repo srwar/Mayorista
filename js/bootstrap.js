@@ -57,7 +57,8 @@
 
   })
 
-}(window.jQuery);/* ==========================================================
+}(window.jQuery);
+/* ==========================================================
  * bootstrap-alert.js v2.1.0
  * http://twitter.github.com/bootstrap/javascript.html#alerts
  * ==========================================================
@@ -146,7 +147,8 @@
     $('body').on('click.alert.data-api', dismiss, Alert.prototype.close)
   })
 
-}(window.jQuery);/* ============================================================
+}(window.jQuery);
+/* ============================================================
  * bootstrap-button.js v2.1.0
  * http://twitter.github.com/bootstrap/javascript.html#buttons
  * ============================================================

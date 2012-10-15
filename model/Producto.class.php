@@ -8,6 +8,4 @@
 		private $p_unidad_medida;
 		private $cantidad_solicitada;
 		private $cantidad_recibida;
-    
-    //falta agregar cosas
 	}

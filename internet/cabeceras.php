@@ -15,7 +15,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() 
 			{ 
-				$("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
+				$("#myTable").tablesorter( {sortList: [[0,0]]} ); 
 			} 
 		);
 	</script>	

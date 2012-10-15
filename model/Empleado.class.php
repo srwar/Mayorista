@@ -1,36 +1,49 @@
 <?php
 	class Empleado {
-		private $dni; 
+		private $dni;
+		private $contrasena;
 		private $apellido;
-		private $nombre;
-		private $legajo;
+		private $nombre;		
 		private $rol;
+		private $permiso;
 		
-		function Empleado($dni, $apellido, $nombre, $legajo, $rol) {
+		function Empleado($dni, $contrasena, $apellido, $nombre, $rol, $permiso) {
                     $this->dni =  $dni;
                     $this->apellido = $apellido;
                     $this->nombre = $nombre;
-                    $this->legajo = $legajo;
-                    $this->rol = $rol;			
+                    $this->contrasena = $contrasena;
+                    $this->rol = $rol;
+					$this->permiso = $permiso;
 		}
 		
-		function getDni() {
+		public function getDni() {
 			return $this->dni;
 		}
 		
-		function getApellido() {
+		public function getApellido() {
 			return $this->apellido;
 		}
 		
-		function getNombre() {
+		public function getNombre() {
 			return $this->nombre;
 		}
 		
-		function getLegajo() {
-			return $this->legajo;
+		public function getContrasena() {
+			return $this->contrasena;
 		}
 		
-		function getRol() {
+		public function getRol() {
 			return $this->rol;
 		}
+		
+		public function getPermiso() {
+			return $this->permiso;
+		}
+		
+		public function puedoEstarAqui($permiso) {
+			if($permiso != $this->getPermiso()) {
+				header("Location: index.php");
+				exit();				
+			}		
+		}	
 	}

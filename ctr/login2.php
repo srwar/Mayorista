@@ -24,15 +24,13 @@
 			session_name("Mayorista");
 			session_start();  
             $_SESSION["usuario"] = $usuario;  
-            $_SESSION["contrasena"] = md5($contrasena);  
-            //la variable $array contiene todos los datos de la base de datos  
-            //para obtenerlos solamente hay que poner entre los corchetes   
-            //el nombre de la columna  
-            //$_SESSION["nombre"] = $array["Nombre"];  
-            //$_SESSION["apellidos"]=$array["Apellidos"];  
-            //$_SESSION["email"]=$array["Email"];  
-            //y cogemos todos los datos que queremos de la base de datos  
-            //session_register($_SESSION);  
+            $_SESSION["contrasena"] = md5($contrasena); 
+			include("../model/Cliente.class.php");
+			$data = mysql_query("SELECT * FROM cliente WHERE cuit = '". $usuario ."';",$link);
+			$array = mysql_fetch_assoc($data);
+			$cliente = new Cliente($array['cuit'], $array['apellido'], $array['nombre'], $array['sexo']);
+			//echo var_dump($cliente)."<br>";
+			$_SESSION['cliente'] = serialize($cliente);			
          }  
       }  
    }  

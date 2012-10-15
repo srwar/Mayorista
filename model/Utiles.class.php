@@ -1,6 +1,6 @@
 <?php
 
-  class Utiles{
+  class Utiles {
     
     /*
      * Suponiendo que vamos a recibir un numero como parametro,
@@ -56,10 +56,9 @@
     }
     
     static function esCodigoValido($codigo){
-    include ("ABMProducto.class.php");
      if(!preg_match("/^[0-9]{1}-[0-9]{3}-[0-9]{3}/",$codigo)) {
-			  return false;
-		  }else{
+		return false;
+	 }else{
         return true;
       }
     }

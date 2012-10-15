@@ -1,25 +1,32 @@
 <?php
-  error_reporting(E_ALL);
-  ini_set("display_errors", true);
-  include("Utiles.class.php");
-  
-  //echo var_dump(Utiles::esCodigoValido("000-0-000"));
-  
-  //echo var_dump(Utiles::isEntero(12.0));
- 
-  //echo var_dump(Utiles::isFlotante(12));
-  /*$unidadesDeMedida = array(
-      "kg" => "Kilogramo",
-      "gr" => "Gramo",
-      "lt" => "Litro",
-      "ml" => "mL",
-      "cm" => "cm3"
-  );*/
+	include("DBMysql.php");
+	$query = "SELECT nombre FROM categoria;";
+        /*
+	$resultado = @DBMysql::consulta("charlsn", "chalsn", $query);
+	if($resultado == null) {
+		//header("Location: index.php");
+		echo "No hay nada";
+		exit();
+	}
+    else {
+		$resultado->fetch_assoc();
+		
+        foreach($resultado as $row)
+            echo "<h1>". $row['nombre'] ."</h1>";
+	}		*/
+	
+	DBMysql::login("charlsn", "charlsn");
+	if(DBMysql::isLogger()) {
+			echo "Sip!!";
+			$c = unserialize($_SESSION['connection']);
+			echo var_dump($c);
+			$query = "Select nombre from categoria;";
+			$resultado = $c->query($query);
+			while($row = $resultado->fetch_assoc())			
+				echo $row['nombre'];
+	}
+	
+	else
+		echo "Nop!!";
 
-  //echo var_dump(Utiles::isMedidaCorrecta("kgp",$unidadesDeMedida));
-  //$asd = "654";
-  //echo var_dump(Utiles::nombreEmpleadoValido("pepe"));
-  
-  echo var_dump(Utiles::nombreProductoValido("producto54654"));
- 
 ?>

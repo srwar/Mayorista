@@ -43,10 +43,10 @@
 		<div id="bar-der">
 			<?php 
 				#Se incluyen las barras laterales "widget"
-				require 'bar_busquedaproductos.php';
-				require 'bar_subcripcion.php';
-				require 'bar_horarios.php';
-				require 'bar_estadisticas.php'; 
+				require '../comunes/bar_busquedaproductos.php';
+				require '../comunes/bar_subcripcion.php';
+				require '../comunes/bar_horarios.php';
+				require '../comunes/bar_estadisticas.php'; 
 			?>										
 		</div>
 		</div>		
