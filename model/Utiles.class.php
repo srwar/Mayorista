@@ -7,6 +7,7 @@
      *    Asignar el resultado a una variable temporal llamada $varTemp
      *    Comparar el resultado el cual arrojara verdadero o falso dependiendo de dicha comparacion
      */
+    
     static function isEntero($numero){
        $varTemp = (int) $numero;
        if($varTemp === $numero){
@@ -27,8 +28,20 @@
       }
     }
     
-    static function isAlgoCorrecto($nn){
+    static function isMedidaCorrecta($llave){
+      $unidadesDeMedida = array(
+        "kg" => "Kilogramo",
+        "gr" => "Gramo",
+        "lt" => "Litro",
+        "ml" => "mL",
+        "cm" => "cm3"
+      );
       
+      if(array_key_exists($unidadesDeMedida, $llave)){
+          return true;
+      }else{
+          return false;
+      }
     }
   }
 ?>
