@@ -52,7 +52,7 @@
 		</div>		
 		<?php 	
 			#Se incluye el pie de la pagina
-			require 'pie.php';			
+			require '../comunes/pie.php';			
 		?>
     </body>
 </html>

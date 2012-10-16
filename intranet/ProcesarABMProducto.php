@@ -4,7 +4,7 @@
 			$empleado = unserialize($_SESSION['Empleado']);
 			switch($_SESSION['ABM']) {
 				case "BAJA":
-					$resultado = DBMysql::consulta($empleado->getDni(), $empleado->getContrasena(), "UPDATE producto SET activo = 0 WHERE codigo = '". $Producto->getCodigo() ."';");
+					$resultado = DBMysql::consulta("UPDATE producto SET activo = 0 WHERE codigo = '". $Producto->getCodigo() ."';");
 					if($resultado) {
 						$_SESSION['error'] = "Producto ". $Producto->getCodigo() ." fue dado de BAJA!!";
 						$OK = true;
@@ -24,7 +24,7 @@
 				break;
 				case "MODIFICACION":
 					$query = "UPDATE producto SET codigo = '". $Producto->getCodigo() ."', stock = ". $Producto->getStock() .", stock_min = ". $Producto->getStock_min() .", precio = ". $Producto->getPrecio() .", nombre = '". $Producto->getNombre() ."', p_cantidad = ". $Producto->getP_cantidad() .", p_tamanio = ". $Producto->getP_tamanio() .", p_unidad_medida = '". $Producto->getP_unidad_medida() ."', categoria = ". $Producto->getCategoria() .", proveedor = ". $Producto->getProveedor() .", oferta = ". $Producto->getOferta() ." WHERE codigo = '". $Producto->getCodigo() ."';";
-					$resultado = DBMysql::consulta($empleado->getDni(), $empleado->getContrasena(), $query);
+					$resultado = DBMysql::consulta($query);
 					if($resultado) {
 						$_SESSION['error'] = "Producto ". $Producto->getCodigo() ." MODIFICADO!!";
 						$OK = true;
@@ -34,7 +34,7 @@
 				break;
 				case "ALTAENBAJA":
 					$query = "UPDATE producto SET activo = 1 WHERE codigo = '". $Producto->getCodigo() ."';";
-					$resultado = DBMysql::consulta($empleado->getDni(), $empleado->getContrasena(), $query);
+					$resultado = DBMysql::consulta($query);
 					if($resultado) {
 						$_SESSION['error'] = "Producto ". $Producto->getCodigo() ." de BAJA en ALTA !!";
 						$OK = true;

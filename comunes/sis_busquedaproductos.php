@@ -11,11 +11,11 @@
 					//exit();
 				}			
 				if($valid) {																
-						include("../model/DBMysql.php");                                                
-						include("../comunes/tabla.php");
+						include_once "../model/DBMysql.php";                                                
+						include_once "../comunes/tabla.php";
 						$cabeceras = array("Codigo", "Nombre", "Descripcion", "Precio");
 						$query = "SELECT codigo, nombre, concat(p_cantidad, ' x ', p_tamanio, ' ', p_unidad_medida ), precio FROM producto WHERE nombre LIKE '%". $producto ."%';";
-						$resultado = DBMysql::consulta("charlsn", "charlsn", $query);						
+						$resultado = DBMysql::consulta($query);						
 				}
 			?>
 			<fieldset>

@@ -1,6 +1,6 @@
 <?php
 	include("../comunes/session_start.php");
-	include("../model/Empleado.class.php");
+	include_once "../model/Empleado.class.php";
 	$MOSTRAR = false;
 	$empleado = unserialize($_SESSION['Empleado']);
 	$empleado->puedoEstarAqui(1);

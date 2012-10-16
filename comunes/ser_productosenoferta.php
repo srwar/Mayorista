@@ -5,11 +5,11 @@
 					</legend>
 					<!--###############################################-->
 						<?php 																			
-							//include("../model/DBMysql.php");
-							include("../comunes/tabla.php");
+							include_once "../model/DBMysql.php";
+							include_once "../comunes/tabla.php";
 							$cabeceras = array("CODIGO", "PRODUCTO", "DESCRIPCION", "PRECIO");
 							$query = "SELECT * FROM productos_oferta;";							
-							$resultado = DBMysql::consulta("charlsn", "charlsn", $query);
+							$resultado = DBMysql::consulta($query);
 							graficarTabla($cabeceras, $resultado);
 						?>
 						

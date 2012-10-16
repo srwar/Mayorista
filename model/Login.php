@@ -4,7 +4,7 @@
 		exit();
 	}
 	
-	include("DBMysql.php");
+	include_once "DBMysql.php";
 	if(isset($_POST['tuser']) && $_POST['tuser'] == "intranet") {
 		if(DBMysql::loginIntranet($_POST['usuario'], $_POST['contrasena'])) {
 			header("Location: ../intranet/");

@@ -5,7 +5,7 @@
 	$categoria = array("1" => "BEBIDAS", "2" => "COMIDA", "3" => "GOLOSINAS", "4" => "CEREALES Y LEGUMBRES");
 	include ("ABMProducto.class.php");
 	include("../model/DBMysql.php");	
-	include("../model/Util.class.php");
+	include("../model/Utiles.class.php");
     $error = array();			
 			if (isset($_POST) && isset($_POST['cancelar'])) {
 				unset($_SESSION['ABMProducto']);
@@ -18,23 +18,23 @@
 			if (isset($_POST) && isset($_POST['aceptar'])) {		
 				$Producto = new ABMProducto($_POST['txtCodigo'], $_POST['txtStock'], $_POST['txtStockMinimo'], $_POST['txtPrecio'], $_POST['txtNombre'], $_POST['txtCantidad'], $_POST['txtTamanio'], $_POST['txtUnidadMedida'], $_POST['txtCategoria'], $_POST['txtProveedor'], @$_POST['txtOferta']);
 				  
-				  if(!Utiles::isCodigoValido($Producto->getCodigo())) {
+				  if(!Utiles::esCodigoValido($Producto->getCodigo())) {
 					  $error[] = "Ingrese codigo de producto";
 				  }
 				  if(!Utiles::isEntero($Producto->getStock())) {
 					  $error[] = "Ingrese stock del nuevo producto";
 				  }
-				  if(!Utiles::isEntero($Producto->getStock_min()))) {
+				  if(!Utiles::isEntero($Producto->getStock_min())) {
 					  $error[] = "Ingrese StockMin";
 				  }
 				  if(!preg_match("/[0-9]+.[0-9]/",$Producto->getPrecio())) {
 					  $error[] = "Ingrese precio del producto";
 				  }
-				  if(!Utiles::nombreProductoValido($Producto->getNombre()))) {
+				  if(!Utiles::nombreProductoValido($Producto->getNombre())) {
 					  $error[] = "Que nombre posee el producto?";
 				  }
 				  //!Utiles::isEntero($Producto->getP_tamanio())
-				  if(!Utiles::isEntero($Producto->getP_cantidad()))) {
+				  if(!Utiles::isEntero($Producto->getP_cantidad())) {
 					  $error[] = "Cuantas unidades contiene el producto?";
 				  }
 				  if(!Utiles::isEntero($Producto->getP_tamanio())) {
